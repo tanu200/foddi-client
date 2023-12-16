@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
-import { FiPhoneCall } from "react-icons/fi";
+
+import { FaUser } from "react-icons/fa";
+import Modal from '../components/Modal';
 
 const Navbar = () => {
 
@@ -71,8 +73,12 @@ const Navbar = () => {
           <span className="badge badge-sm indicator-item">8</span>
         </div>
       </div>
+{/* login button */}
+    <button 
+    onClick={()=>document.getElementById('my_modal_3').showModal()} 
+    className="btn bg-green rounded-full px-6 text-white gap-2"><FaUser></FaUser>Login</button>
 
-    <a className="btn bg-green rounded-full px-6 text-white gap-2"><FiPhoneCall></FiPhoneCall>Contact</a>
+<Modal></Modal>
   </div>
 </div>
         </div>
